@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+#header{
+    /* background: url(images/hemu4.png); */
+    background-position:center;
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+}
+nav{
+    padding: 30px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+nav .logo img{
+    width: 100px;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    position: relative;
+    color: white;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    font-size: 20px;
+    width: 0%;
+    height: 15%;
+    /* color: red; */
+    background-color: red;
+    left: 0px;
+    bottom: -6px;
+    
+}
+nav ul li a:hover::before{
+    width: 100%;
+    transition: all 0.9s;
+}
+.header-content{
+    padding: 15% 10%;
+}
+.header-content h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.header-content h1{
+    font-size: 70px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.header-content h1 span{
+    color: rgb(250, 53, 53);
+}
+
+/* ===================================ABOUT======================================= */
+#About{
+    margin-top: 150px;
+}
+#About .details{
+    padding: 10px 5%;
+}
+#About .row{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+#About .details .row .col-one{
+    flex-basis: 35%;
+    
+}
+#About .details .row .col-one img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+#About .details .row .col-two{
+    flex-basis: 65%;
+    color: rgba(230, 226, 226, 0.934);
+    padding-left: 100px;
+    /* padding-top: 20px; */
+}
+#About .details .row .col-two h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+}
+#About .details .row .col-two p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: serif;
+}
+#About .row .col-two ul {
+    margin-top: 40px;
+}
+#About .row .col-two ul li{
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    font-size: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+.col-two .title-link::after{
+    content: '';
+    position: absolute;
+    font-size: 20px;
+    width: 0%;
+    height: 15%;
+    /* color: red; */
+    background-color: red;
+    left: 0px;
+    bottom: -6px;
+}
+.title-link.active-title::after{
+    width: 60%;
+    transition: all 0.6s;
+}
+
+.col-two .title-content{
+    margin-top: 30px;
+    display: none;
+}
+.col-two .title-content h3{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 3px;
+    color: rgb(194, 41, 41);
+}
+.col-two .title-content h2{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.col-two .active-content{
+    display: block;
+}
+
+/* ==============================Services================================================ */
+
+#Services{
+    margin-top: 150px;
+}
+#Services .container{
+    padding: 10px 5%;
+}
+.container .box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-left: 3%;
+}
+#Services .container h2{
+    margin-left: 3%;
+    color: white;
+    font-size: 70px;
+    font-weight: 600; 
+    margin-bottom: 80px;  
+}
+#Services .box .item{
+    display: flex;
+    justify-content: left;
+    align-items:start;
+    flex-direction: column;
+    padding: 30px 25px;
+    background-color: rgb(73 64 64 / 93%);
+    border-radius: 6px;
+    transition: transform 0.6s;
+
+}
+#Services .box .item h1{
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-family: 500;
+}
+#Services .box .item p{
+    font-size: 17px;
+    font-family: 400;
+    margin-bottom: 8px;
+}
+#Services .box .item a{
+    text-decoration: none;
+    color: blue;
+}
+#Services .box .item i{
+    font-size: 60px;
+    width: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+#Services .box .item:hover{
+    transform: translateY(-10px);
+    background-color: rgba(225, 9, 89, 0.93);
+}
+/* =====================================Works==================================== */
+#Works{
+    margin-top: 150px;
+}
+#Works .container{
+    padding: 10px 5%;
+}
+
+#Works .container h2{
+    margin-left: 3%;
+    color: white;
+    font-size: 70px;
+    font-weight: 600; 
+    margin-bottom: 80px;  
+}
+#Works .container .box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-left: 3%;
+}
+#Works .container .box .item img{
+    transition: all 0.8s;
+    width: 100%;
+   
+}
+#Works .container .box .item h3{
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+#Works .container .box .item p{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+#Works .container .box .item a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 20px;
+}
+#Works .container .box .item i{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid greenyellow; */
+    display: block;
+    display: inline;
+    margin-top: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 100%;
+    
+}
+
+
+.box .item{
+    position: relative;
+    transition: all 0.6s;
+}
+
+.lower{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    transition: all 0.8s;
+}
+.item:hover img{
+    transform: scale(1.1);
+}
+.item:hover .lower{
+    /* display: flex; */
+    height: 100%;
+    /* width: 100%; */
+    transform: scale(1.1);
+}
+.see button{
+    margin: 50px auto;
+    padding: 20px 30px;
+    font-size: 20px;
+    display: block;
+    width: 150px;
+    color: white;
+    background-color: greenyellow;
+    transition: all 0.8s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.see button:hover{
+    background-color: #ff004f;
+}
+
+/* =======================================Contact============================================= */
+
+#Contact{
+    margin-top: 150px;
+}
+#Contact .cont-container{
+    padding: 10px 5%;
+}
+.Contact-row{
+    display: flex;
+}
+.Contact-row .col1{
+    flex-basis: 43%;
+}
+.Contact-row .col2{
+    flex-basis: 57%;
+    color: white;
+}
+.cont-container .Contact-row .col1 h1{
+    margin-left: 3%;
+    color: white;
+    font-size: 70px;
+    font-weight: 600; 
+    margin-bottom: 30px;  
+}
+.cont-container .Contact-row .col1 p{
+    margin-left: 4%;
+    margin-bottom: 20px;
+    color: white;
+}
+.cont-container .Contact-row .col1 p a{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.cont-container .Contact-row .col1 p i{
+    margin-right: 20px;
+    font-size: 30px;
+}
+.cont-container .Contact-row .col1 .social-icons{
+    margin-left: 3%;
+    margin-bottom: 30px;
+}
+.cont-container .Contact-row .col1 .social-icons a i{
+    font-size: 50px;
+    margin-right: 10px;
+    
+}
+.cont-container .Contact-row .col1  .downBtn{
+    margin-left: 3%;
+    /* margin: 50px auto; */
+    padding: 20px 20px;
+    font-size: 20px;
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    background-color: greenyellow;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+.cont-container .Contact-row .col1  button:hover{
+    background-color: #ff004f;
+}
+
+
+
+.col2 form input{
+    display: block;
+    color: rgb(215, 210, 210);
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 14px;
+    width: 100%;
+}
+.col2 form input[type="btn"]{
+    margin: 50px auto;
+    padding: 20px 30px;
+    font-size: 20px;
+    display: block;
+    width: 150px;
+    color: black;
+    /* background-color: greenyellow; */
+    transition: all 0.8s;
+    cursor: pointer;
+}
+.col2 form input[type="btn"]:hover{
+    background-color: #ff004f;
+    color: white;
+}
+.col2 #message{
+    height: 150px;
+}
+.copyright{
+    margin-top: 20px;
+    padding: 15px 10px;
+    background-color: rgb(195, 179, 179);
+    color: white;
+}
+.copyright p{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+
+}
